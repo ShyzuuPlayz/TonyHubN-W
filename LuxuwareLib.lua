@@ -2,9 +2,9 @@ if game.CoreGui:FindFirstChild("ShZWare") then
     game.CoreGui.ShZWare:Destroy()
 end
 
-local Luxt1 = {}
+local ShZw = {}
 
-function Luxt1.CreateWindow(libName, logoId)
+function ShZw.CreateWindow(libName, logoId)
     local ShZWare = Instance.new("ScreenGui")
     local shadow = Instance.new("ImageLabel")
     local MainFrame = Instance.new("Frame")
@@ -147,7 +147,7 @@ function Luxt1.CreateWindow(libName, logoId)
     hubLogo.Position = UDim2.new(0.0567928664, 0, 0.0243411884, 0)
     hubLogo.Size = UDim2.new(0, 30, 0, 30)
     hubLogo.ZIndex = 2
-    hubLogo.Image = "rbxassetid://"..logoId
+    hubLogo.Image = logoId
 
     MainCorner_2.CornerRadius = UDim.new(0, 999)
     MainCorner_2.Name = "MainCorner"
@@ -1264,4 +1264,4 @@ function Luxt1.CreateWindow(libName, logoId)
     return TabHandling
 end
 
-return Luxt1
+return ShZw
