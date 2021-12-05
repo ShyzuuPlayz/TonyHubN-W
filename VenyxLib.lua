@@ -1,12 +1,3 @@
---[[
-	Disclaimer: Very old code, I also had to rewrite a lot of Dino's code.. (cringe)
-	
-	Credits:
-		Dino
-		Magik Manz
-		Luzu
---]]
-
 local UI
 do
 	local UserInputService = game:GetService("UserInputService")
