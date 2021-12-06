@@ -19,8 +19,6 @@ local s1 = tb1:Section("Press Me :)")
 local s2 = tb2:Section("Open Me Daddy")
 
 function anir6()
-    if _G.alrdyreanimate then return print("Already Reanimated") end
-
     _G.alrdyreanimate = true
 
     getgenv().Nullware_ReanimateConfiguration = {
@@ -38,8 +36,6 @@ function anir6()
 end
 
 function anir15()
-    if _G.alrdyreanimate then return print("Already Reanimated") end
-
     _G.alrdyreanimate = true
 
     getgenv().Nullware_ReanimateConfiguration = {
