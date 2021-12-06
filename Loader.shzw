@@ -1,0 +1,96 @@
+local pl = game:GetService("Players")
+local getpl = pl.LocalPlayer
+
+local uid = getpl.UserId
+local thumbType = Enum.ThumbnailType.HeadShot
+local thumbSize = Enum.ThumbnailSize.Size420x420
+local content, isReady = pl:GetUserThumbnailAsync(uid, thumbType, thumbSize)
+
+local ui = loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/ShyzuuPlayz/TonyHubN-W/main/KLibOs.lua"))()
+
+local wd = ui.CreateWindow("Tony Secret UI", tostring(content))
+
+local tb1 = wd:Tab("Reanimate", 1)
+
+local tb2 = wd:Tab("Scripts", 2)
+
+local s1 = tb1:Section("Press Me :)")
+
+local s2 = tb2:Section("Open Me Daddy")
+
+function anir6()
+    if _G.alrdyreanimate then return print("Already Reanimated") end
+
+    _G.alrdyreanimate = true
+
+    getgenv().Nullware_ReanimateConfiguration = {
+    	["Netless"] = true, --Toggles Netless.
+    	["Anti-Fling"] = false, --Toggles Anti-Fling.
+    	["Hats To Align"] = {}, --List of hats that you want to align. (e.g. {"Hat1", "Hat2"} or {"All"})
+    	["Head Movement Without Godmode"] = true, --Toggles Head Movement Without Godmode.
+    	["Enable Limb Collisions"] = false, --Enables your limb's collisions. (Overrides "Disable Torso Collisions" if enabled, also doesn't require godmode)
+    	["Disable Torso Collisions"] = false, --Disables your torso's collisions. (Doesn't work with godmode)
+    	["R15 To R6"] = false, --Toggles R15 To R6.
+    	["Godmode"] = false --Toggles Godmode.
+    }
+    
+    loadstring(game:HttpGetAsync("https://gist.githubusercontent.com/M6HqVBcddw2qaN4s/8cd532018277ee9982433eea25a6c14f/raw/sewMjTpJvVBLR96L"))()
+end
+
+function anir15()
+    if _G.alrdyreanimate then return print("Already Reanimated") end
+
+    _G.alrdyreanimate = true
+
+    getgenv().Nullware_ReanimateConfiguration = {
+    	["Netless"] = true, --Toggles Netless.
+    	["Anti-Fling"] = false, --Toggles Anti-Fling.
+    	["Hats To Align"] = {}, --List of hats that you want to align. (e.g. {"Hat1", "Hat2"} or {"All"})
+    	["Head Movement Without Godmode"] = true, --Toggles Head Movement Without Godmode.
+    	["Enable Limb Collisions"] = false, --Enables your limb's collisions. (Overrides "Disable Torso Collisions" if enabled, also doesn't require godmode)
+    	["Disable Torso Collisions"] = false, --Disables your torso's collisions. (Doesn't work with godmode)
+    	["R15 To R6"] = true, --Toggles R15 To R6.
+    	["Godmode"] = false --Toggles Godmode.
+    }
+    
+    loadstring(game:HttpGetAsync("https://gist.githubusercontent.com/M6HqVBcddw2qaN4s/8cd532018277ee9982433eea25a6c14f/raw/sewMjTpJvVBLR96L"))()
+end
+
+s1:Button("Reanimate R6", anir6)
+s1:Button("Reanimate R15", anir15)
+
+_G.alrdyreanimate = false
+
+function runscr(scrid)
+    if not _G.alrdyreanimate then return print("You forgot to reanimate") end
+
+    local yes = tick()
+
+    local succ, err = pcall(function()
+        loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/ShyzuuPlayz/TonyHubN-W/main/Scripts/"..scrid..".shzw"))()
+    end)
+
+    if err then
+        print("An error occured: "..err)
+    end
+
+    if succ then
+        print("Running "..scrid..", Loaded in "..tick() - yes.."s")
+    end
+end
+
+function txb(txt)
+    runscr(txt)
+end
+
+s2:TextBox("Type Animation Here", "", txb)
+
+function resp()
+    _G.stopall = true
+    local gchar = getpl.Character
+	gchar.Humanoid.MaxHealth = 0
+    gchar.Humanoid.Health = 0
+    gchar.HumanoidRootPart.CFrame = CFrame.new(gchar.HumanoidRootPart.Position.X, gchar.HumanoidRootPart.Position.Y - 500, gchar.HumanoidRootPart.Position.Z)
+end
+
+s2:Button("Respawn/Kill Script Senpai <3", resp)
