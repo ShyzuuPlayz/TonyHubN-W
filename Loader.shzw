@@ -83,8 +83,9 @@ s2:TextBox("Type Animation Here", "", txb)
 
 function resp()
     _G.stopall = true
+    _G.alrdyreanimate = false
     local gchar = getpl.Character
-	gchar.Humanoid.MaxHealth = 0
+    gchar.Humanoid.MaxHealth = 0
     gchar.Humanoid.Health = 0
     gchar.HumanoidRootPart.CFrame = CFrame.new(gchar.HumanoidRootPart.Position.X, gchar.HumanoidRootPart.Position.Y - 500, gchar.HumanoidRootPart.Position.Z)
 end
