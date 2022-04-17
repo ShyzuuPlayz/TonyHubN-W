@@ -6,7 +6,7 @@ local thumbType = Enum.ThumbnailType.HeadShot
 local thumbSize = Enum.ThumbnailSize.Size420x420
 local content, isReady = pl:GetUserThumbnailAsync(uid, thumbType, thumbSize)
 
-local ui = loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/ShyzuuPlayz/TonyHubN-W/main/KLibOs.lua?token=GHSAT0AAAAAABTJTPREYQ5OJ4MKIVNCXZHKYS3RZHA"))()
+local ui = loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/ShyzuuPlayz/TonyHubN-W/main/KLibOs.lua"))()
 
 local wd = ui.CreateWindow("Tony Secret UI", tostring(content))
 
