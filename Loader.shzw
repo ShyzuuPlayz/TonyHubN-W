@@ -52,13 +52,13 @@ function anir15()
     loadstring(game:HttpGetAsync("https://gist.githubusercontent.com/M6HqVBcddw2qaN4s/8cd532018277ee9982433eea25a6c14f/raw/sewMjTpJvVBLR96L"))()
 end
 
-s1:Button("Reanimate R6", anir6)
-s1:Button("Reanimate R15", anir15)
+--s1:Button("Reanimate R6", anir6)
+--s1:Button("Reanimate R15", anir15)
 
-_G.alrdyreanimate = false
+--_G.alrdyreanimate = false
 
 function runscr(scrid)
-    if not _G.alrdyreanimate then return print("You forgot to reanimate") end
+    --if not _G.alrdyreanimate then return print("You forgot to reanimate") end
 
     local yes = tick()
 
